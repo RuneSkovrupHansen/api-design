@@ -9,4 +9,5 @@ dependencies = [
     "fastapi[standard]>=0.139.1",
     "pydantic>=2.13.4",
     "sqlmodel>=0.0.39",
+    "strawberry-graphql[cli]>=0.321.0",
 ]

@@ -41,6 +41,11 @@ Pagination, Rate-limiting, Auth
 
 ## GraphQL
 
-GraphQL of the same API.
+Run GraphQL API:
+
+```bash
+uv run strawberry dev graphql_api
+```
+
 
 
