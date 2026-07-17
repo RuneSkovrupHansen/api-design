@@ -34,11 +34,6 @@ curl http://127.0.0.1:8000/v2/pokemon/1
 # {"id":1,"name":"bulbasaur","types":[{"id":12,"name":"grass"},{"id":4,"name":"poison"}]}
 ```
 
-TODO:
-
-Pagination, Rate-limiting, Auth
-
-
 ## GraphQL
 
 Run GraphQL API:
@@ -47,5 +42,9 @@ Run GraphQL API:
 uv run strawberry dev graphql_api
 ```
 
+Because Strawberry takes a code-first approach, the schema is defined in Python. To export it as SDL, run:
 
+```bash
+uv run strawberry export-schema graphql_api > schema.graphql
+```
 

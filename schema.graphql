@@ -1,0 +1,29 @@
+type Continent {
+  name: String!
+  zones: [Zone!]!
+}
+
+type Dungeon {
+  name: String!
+}
+
+input Pagination {
+  offset: Int! = 0
+  limit: Int! = 0
+}
+
+type Query {
+  continents: [Continent!]!
+  zones(filter: ZoneFilter = null, pagination: Pagination = null): [Zone!]!
+}
+
+type Zone {
+  name: String!
+  level: Int!
+  dungeons: [Dungeon!]!
+}
+
+input ZoneFilter {
+  minLevel: Int = null
+  hasDungon: Boolean = null
+}
